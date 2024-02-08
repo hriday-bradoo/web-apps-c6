@@ -1,0 +1,10 @@
+<h1>Companies</h1>
+<% companies = Company.all%>
+
+<p>There are <%=companies.count%> companies</p>
+
+<ul>
+<%for zebra in companies%>
+  <li><%=zebra["name"]%></li>
+  <%end%>
+</ul>

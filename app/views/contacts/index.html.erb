@@ -1,0 +1,13 @@
+<h1>Here are the contacts!</h1>
+<% contacts = Contact.includes(:company).all%>
+
+<p>
+There are <%=contacts.count%> contacts
+</p>
+
+<ul>
+<% for zebra in contacts%>
+<%company = zebra.company["name"]%>
+  <li>Name: <%=zebra["first_name"]%> <%=zebra["last_name"]%> and Company: <%=company%></li>
+<%end%>
+</ul>
